@@ -122,9 +122,7 @@ void displaySun(){
 
 void displaySolarSystem(){
     displaySun();
-
     displayMoonPlanet();
-
     displayPlanets();
 }
 
@@ -147,10 +145,10 @@ void display(){
 
 void init(){
     glClearColor(0.0, 0.0, 0.2, 1.0);
-    glEnable(GL_DEPTH_TEST);
     glEnable(GL_COLOR_MATERIAL);
-    glShadeModel(GL_SMOOTH);
+    glEnable(GL_DEPTH_TEST);
     glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+    glShadeModel(GL_SMOOTH);
 }
 
 int main(int argc, char **argv){
@@ -159,7 +157,6 @@ int main(int argc, char **argv){
     glutInitWindowSize(800, 800);
     glutCreateWindow("SOLAR SYSTEM");
     glutInitWindowPosition(100, 100);
-
     init();
     glutDisplayFunc(display);
     glutKeyboardFunc(keyboard);

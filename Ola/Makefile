@@ -1,7 +1,7 @@
 output: olasquares.o
 	g++ olasquares.o -o olasquares
 
-solar.o: solar.cpp
+olasquares.o: olasquares.cpp
 	g++ -c olasquares.cpp
 
 olasquares:
